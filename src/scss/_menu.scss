@@ -47,14 +47,14 @@
 			}
 		}
 		@media screen and (max-width: 1024px) {
-			background: rgba(0,104,221,.8);
+			background: rgba(16,16,29,.9);
 			transition: all 250ms;
 			position: absolute;
 			padding: 30px 40px;
 			display: block;
 			right: -100vw;
 			height: auto;
-			top: 70px;
+			top: 65px;
 			.menu-item {
 				@include primary-animation;
 				animation-delay: 400ms;
@@ -62,24 +62,25 @@
 				height: 40px;
 				opacity: 0;
 				.item-link {
+					justify-content: center;
 					padding: 0;
 				}
 				&:after {
-					bottom: 4px;
+					display: none;
 				}
 			}
 		}
 		@media screen and (max-width: 640px) {
-			height: calc(100vh - 15vw);
+			height: calc(100vh - 13vw);
 			flex-direction: column;
 			display: flex;
-			padding: 6vw;
+			padding: 10vw;
 			top: -150vh;
 			width: 100%;
-			right: auto;
+			right: 0;
 			.menu-item {
-				line-height: 10vw;
-				height: 10vw;
+				line-height: 12vw;
+				height: 12vw;
 				.item-link {
 					font-size: 5vw;
 				}
@@ -132,7 +133,7 @@
 					left: -1px;
 				}
 			}
-			& ~ .menu {
+			& ~ .header-menu {
 				right: 0;
 				.menu-item {
 					animation-name: mobile-menu-fade;
@@ -175,9 +176,9 @@
 						bottom: 43%;
 					}
 				}
-				& ~ .menu {
+				& ~ .header-menu {
 					animation-name: mobile-menu-move;
-					top: 15vw;
+					top: 13vw;
 					.menu-item {
 						animation-name: mobile-menu-fade;
 						animation-delay: 300ms;
@@ -186,5 +187,24 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes mobile-menu-fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes mobile-menu-move {
+	0% {
+		top: -150vh;
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		top: 13vw;
 	}
 }

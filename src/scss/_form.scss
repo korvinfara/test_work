@@ -147,6 +147,92 @@
   }
   .form-buttons {
     text-align: center;
+    .button {
+      &.large {
+        width: calc(33% - 20px);
+      }
+    }
+  }
+  @media screen and (max-width: 820px) {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 640px;
+    .grid {
+      margin-bottom: 0;
+      .grid-column {
+        &:last-child {
+          text-align: center;
+        }
+      }
+      .button {
+        &.large {
+          width: 50%;
+        }
+      }
+    }
+    .form-buttons {
+      text-align: center;
+      .button {
+        &.large {
+          width: 50%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .grid {
+      .button {
+        &.large {
+          width: 60vw;
+        }
+      }
+    }
+    .form-buttons {
+      text-align: center;
+      .button {
+        &.large {
+          width: 60vw;
+        }
+      }
+    }
+    .range-slider {
+      height: 10vw;
+    }
+    .form-field {
+      &.primary {
+        height: 10vw;
+        .input, .select-header {
+          line-height: 10vw;
+          padding: 0 3vw;
+        }
+      }
+      &.select {
+        .select-header {
+          padding-right: 6vw;
+          .select-icon {
+            right: 5vw;
+            .icon {
+              width: 3vw;
+            }
+          }
+        }
+        .select-body {
+          .select-item {
+            cursor: pointer;
+            padding: 2vw 4vw;
+            font-size: 4vw;
+          }
+        }
+        &.is-active {
+          .select-body {
+            padding: 2vw 0;
+            height: 30vh;
+          }
+        }
+
+
+      }
+    }
   }
 }
 

@@ -25,7 +25,7 @@
       .module-title {
         text-transform: uppercase;
         @include Lato-Bold;
-        font-weight: 800;
+        font-weight: 700;
       }
     }
   }
@@ -82,73 +82,88 @@
     }
   }
   @media screen and (max-width: 1024px) {
-    padding: 50px 0;
-    &.grey {
-      & + .grey {
-        padding-top: 25px;
-      }
-    }
-    .module-text {
-      &.small {
-        margin-top: 40px;
-      }
-    }
     .module-center {
-      padding: 0 20px;
+      padding: 0 30px;
     }
-    .module-buttons {
-      margin-bottom: -25px;
-      margin-top: 25px;
-    }
-    .module-block {
-      position: relative;
-      & + .module-block {
-        margin-top: 40px;
+    &.module-01 {
+      padding: 130px 0 80px;
+      .module-content{
+        .module-title {
+          margin-bottom: 50px;
+        }
+        .module-text {
+          margin-bottom: 50px;
+        }
+        .module-buttons {
+          margin-left: -10px;
+        }
       }
-      .block-title {
-        font-size: 25px;
+    }
+    &.module-02 {
+      padding: 80px 0 100px;
+      .module-content{
+        .module-title {
+          margin-bottom: 50px;
+        }
+        .module-text {
+          margin-bottom: 50px;
+        }
+        .module-buttons {
+          margin-left: -10px;
+        }
       }
     }
   }
   @media screen and (max-width: 640px) {
-    padding: 9vw 0;
-    &.grey {
-      & + .grey {
-        padding-top: 4.5vw;
-      }
-    }
-    .module-title {
-      margin-bottom: 4vw;
-    }
-    .module-text {
-      &.small {
-        margin-top: 6vw;
-        br {
-          display: none;
-        }
-      }
-    }
     .module-center {
       padding: 0 6vw;
     }
-    .module-buttons {
-      margin-bottom: -4.5vw;
-      margin-top: 4.5vw;
+    &.module-01 {
+      background-color: $white;
+      padding: 50vh 0 0;
+      .module-image {
+        background-position: center right;
+        height: 50vh;
+      }
+      .module-content{
+        padding: 8vw 0 10vw;
+        .module-title {
+          margin-bottom: 6vw;
+          font-size: 7vw;
+        }
+        .module-text {
+          margin-bottom:6vw;
+          & > * {
+            margin-bottom: 2vw;
+          }
+          ul {
+            li {
+              margin-bottom: 1vw;
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        .module-buttons {
+          margin-right: -3vw;
+          margin-left: -3vw;
+        }
+      }
     }
-    .module-block {
-      position: relative;
-      & + .module-block {
-        margin-top: 8vw;
-      }
-      .block-title {
-        margin-bottom: 3vw;
-        font-size: 5.5vw;
-      }
-      .block-link {
-        font-size: 3vw;
-        top: 2vw;
-        .link-icon {
-          margin-left: 1vw;
+    &.module-02 {
+      padding: 12vw 0;
+      .module-content{
+        .module-title {
+          margin-bottom: 6vw;
+        }
+        .module-text {
+          margin-bottom: 6vw;
+          font-size: 4.5vw;
+        }
+        .module-buttons {
+          margin-right: -3vw;
+          margin-left: -3vw;
         }
       }
     }

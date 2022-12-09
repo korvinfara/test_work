@@ -40,6 +40,7 @@
 	@media screen and (max-width: 1024px) {
 	}
 	@media screen and (max-width: 640px) {
+		font-size: 4vw;
 	}
 }
 @mixin text-20{
@@ -84,16 +85,16 @@
 		font-size: 30px;
 	}
 	@media screen and (max-width: 640px) {
-		font-size: 5.5vw;
+		font-size: 6.5vw;
 	}
 }
 @mixin text-48{
 	font-size: 48px;
 	@media screen and (max-width: 1024px) {
-		font-size: 45px;
+		font-size: 35px;
 	}
 	@media screen and (max-width: 640px) {
-		font-size: 9vw;
+		font-size: 7vw;
 	}
 }
 

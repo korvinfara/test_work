@@ -37,55 +37,27 @@
 		right: 30px;
 		z-index: 2;
 	}
-	@media screen and (max-width: 1300px) {
-		overflow: visible;
-		z-index: 10;
-		.center {
-			height: 70px;
-		}
-		.logo {
-			margin-right: 3%;
-			.logo-icon {
-				height: 50px;
-			}
-			.logo-text {
-				font-size: 25px;
-				width: 150px;
-			}
-		}
-	}
 	@media screen and (max-width: 1024px) {
-		.center {
-			padding: 0 20px;
+		.header-center {
+			height: 65px;
 		}
-		.logo {
+		.header-logo {
 			.logo-text {
 				font-size: 25px;
-				width: auto;
 			}
-		}
-		.buttons {
-			right: 80px;
 		}
 	}
 	@media screen and (max-width: 640px) {
-		.center {
+		.header-center {
 			padding: 0 6vw;
-			height: 15vw;
+			height: 13vw;
 		}
-		.logo {
-			margin-right: 0;
-			.logo-icon {
-				height: 10vw;
-			}
+		.header-logo {
 			.logo-text {
-				font-size: 4vw;
-				line-height: 1;
-				width: 30vw;
+				span {
+					font-size: 7vw;
+				}
 			}
-		}
-		.buttons {
-			right: 16vw;
 		}
 	}
 

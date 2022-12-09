@@ -1,7 +1,9 @@
 const mobileMenuButton = document.querySelector(".button.mobile");
+const wrap = document.querySelector(".wrap");
 
 mobileMenuButton.onclick = function(){
     mobileMenuButton.classList.toggle("checked");
+    wrap.classList.toggle("checked");
     return null;
 };
 

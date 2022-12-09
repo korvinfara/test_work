@@ -29,8 +29,25 @@
       }
     }
   }
-  @media screen and (max-width: 640px) {
-    margin-bottom: -4vw;
-    margin-left: -4vw;
+  @media screen and (max-width: 820px) {
+    margin-left: -20px;
+    .grid-column {
+      .grid-column-cell {
+        margin-left: 20px;
+      }
+    }
+    &.two {
+      .grid-column {
+        width: 50%;
+      }
+    }
+    &.three {
+      .grid-column {
+        width: 100%;
+        &.two {
+          width: 100%;
+        }
+      }
+    }
   }
 }

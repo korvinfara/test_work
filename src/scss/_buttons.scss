@@ -35,6 +35,24 @@
   &:hover {
     opacity: .6;
   }
+  @media screen and (max-width: 1024px) {
+    &.primary {
+      margin: 5px 10px 0;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    &.primary {
+      margin: 3vw 3vw 0;
+      padding: 3vw 4vw;
+      font-size: 4vw;
+      width: 40vw;
+    }
+    &.large {
+      padding: 3vw 4vw;
+      font-size: 4vw;
+      width: 60vw;
+    }
+  }
   img {
     &:first-child {
       margin-right: 10px;
@@ -43,6 +61,7 @@
       margin-left: 10px;
     }
     @media screen and (max-width: 640px) {
+      width: 4vw;
       &:first-child {
         margin-right: 2vw;
       }
