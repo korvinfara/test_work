@@ -1,0 +1,121 @@
+@mixin Lato-Bold {
+	font-family: 'Lato-Bold', sans-serif;
+}
+@mixin Lato-Regular {
+	font-family: 'Lato-Regular', sans-serif;
+}
+@mixin Raleway-Regular {
+	font-family: 'Raleway-Regular', sans-serif;
+}
+@mixin Raleway-Bold {
+	font-family: 'Raleway-Bold', sans-serif;
+}
+
+
+@mixin text-13 {
+	font-size: 13px;
+	@media screen and (max-width: 1024px) {
+	}
+	@media screen and (max-width: 640px) {
+	}
+}
+@mixin text-15 {
+	font-size: 15px;
+	@media screen and (max-width: 1024px) {
+	}
+	@media screen and (max-width: 640px) {
+	}
+}
+@mixin text-16 {
+	font-size: 16px;
+	@media screen and (max-width: 1024px) {
+
+	}
+	@media screen and (max-width: 640px) {
+		font-size: 3vw;
+	}
+}
+@mixin text-18 {
+	font-size: 18px;
+	@media screen and (max-width: 1024px) {
+	}
+	@media screen and (max-width: 640px) {
+	}
+}
+@mixin text-20{
+	font-size: 20px;
+	@media screen and (max-width: 1024px) {
+		font-size: 18px;
+	}
+	@media screen and (max-width: 640px) {
+		font-size: 3.5vw;
+	}
+}
+
+
+@mixin text-25 {
+	font-size: 25px;
+	@media screen and (max-width: 1024px) {
+	}
+	@media screen and (max-width: 640px) {
+	}
+}
+@mixin text-26 {
+	font-size: 26px;
+	@media screen and (max-width: 1024px) {
+		font-size: 21px;
+	}
+	@media screen and (max-width: 640px) {
+		font-size: 4vw;
+	}
+}
+@mixin text-30 {
+	font-size: 30px;
+	@media screen and (max-width: 1024px) {
+		font-size: 25px;
+	}
+	@media screen and (max-width: 640px) {
+		font-size: 5vw;
+	}
+}
+@mixin text-36 {
+	font-size: 36px;
+	@media screen and (max-width: 1024px) {
+		font-size: 30px;
+	}
+	@media screen and (max-width: 640px) {
+		font-size: 5.5vw;
+	}
+}
+@mixin text-48{
+	font-size: 48px;
+	@media screen and (max-width: 1024px) {
+		font-size: 45px;
+	}
+	@media screen and (max-width: 640px) {
+		font-size: 9vw;
+	}
+}
+
+@mixin img-block {
+	display: block;
+	width: 100%;
+}
+
+@mixin primary-animation {
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+	animation-duration: 400ms;
+}
+
+.img-shadow {
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.border-rotate {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: border-rotate;
+    animation-duration: 5000ms;
+    animation-fill-mode: both;
+}

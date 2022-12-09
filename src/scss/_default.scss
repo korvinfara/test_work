@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+	background: none;
+	outline: none;
+	resize: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+body, html {
+	scroll-behavior: smooth;
+	padding: 0;
+	margin: 0;
+}
+body {
+	@include Lato-Regular;
+	@include text-16;
+	background: #272733;
+	color: $black;
+}
+table {
+	border-collapse: collapse;
+}
+button {
+	transition: all 250ms;
+	cursor: pointer;
+}
+h1, h2, h3, h4, b, strong {
+	font-weight: normal;
+}
+a {
+	text-decoration: none;
+}
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+
+

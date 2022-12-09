@@ -1,0 +1,54 @@
+.button {
+  text-transform: uppercase;
+  justify-content: center;
+  transition: all 350ms;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1;
+  max-width: 100%;
+  &.white{
+    border: 1px solid #6F6D7B;
+    background: $white;
+    color: #2A2B30;
+  }
+  &.blue {
+    border: 1px solid $blue;
+    background: $blue;
+    color: $white;
+  }
+  &.primary {
+    margin: 10px 15px 0;
+    padding: 10px 15px;
+    font-weight: 400;
+    @include text-13;
+    min-height: 43px;
+    width: 183px;
+  }
+  &.large {
+    min-height: 48px;
+    @include text-15;
+    font-weight: 600;
+    width: 370px;
+  }
+  &:hover {
+    opacity: .6;
+  }
+  img {
+    &:first-child {
+      margin-right: 10px;
+    }
+    &:last-child {
+      margin-left: 10px;
+    }
+    @media screen and (max-width: 640px) {
+      &:first-child {
+        margin-right: 2vw;
+      }
+      &:last-child {
+        margin-left: 2vw;
+      }
+    }
+  }
+}

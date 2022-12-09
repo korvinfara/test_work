@@ -1,0 +1,36 @@
+.grid {
+  justify-content: normal;
+  margin-bottom: 25px;
+  margin-left: -30px;
+  .grid-column {
+    margin-bottom: 30px;
+    height: 100%;
+    float: left;
+    .grid-column-cell {
+      margin-left: 30px;
+      height: 100%;
+    }
+  }
+  &.flex {
+    align-items: stretch;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  &.two {
+    .grid-column {
+      width: 50%;
+    }
+  }
+  &.three {
+    .grid-column {
+      width: 33.3333%;
+      &.two {
+        width: 66.6666%;
+      }
+    }
+  }
+  @media screen and (max-width: 640px) {
+    margin-bottom: -4vw;
+    margin-left: -4vw;
+  }
+}
