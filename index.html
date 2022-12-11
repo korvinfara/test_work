@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/simplebar.css">
     <link rel="stylesheet" href="dist/style.css">
     <title>TEST</title>
 </head>
@@ -129,13 +130,13 @@
                                     <div class="grid-column-cell">
                                         <div class="form-field primary select">
                                             <div class="select-header">
-                                                <div class="select-current">Выберите тип системы</div>
+                                                <div class="select-current" name="select">Выберите тип системы</div>
                                                 <div class="select-icon">
                                                     <img class="icon white" src="svg/ico-select-arrow-white.svg"/>
                                                     <img class="icon black" src="svg/ico-select-arrow-black.svg"/>
                                                 </div>
                                             </div>
-                                            <div class="select-body">
+                                            <div class="select-body" data-simplebar>
                                                 <div class="select-item">Sed ut perspiciatis</div>
                                                 <div class="select-item">Nemo enim ipsam</div>
                                                 <div class="select-item">Et harum quidem</div>
@@ -153,24 +154,24 @@
                                 <div class="grid-column">
                                     <div class="grid-column-cell">
                                         <label class="form-field primary">
-                                            <input class="input" type="email" placeholder="Ваш e-mail"/>
+                                            <input class="input" type="email" name="email" placeholder="Ваш e-mail"/>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="grid-column">
                                     <div class="grid-column-cell">
                                         <label class="form-field primary">
-                                            <input class="input" type="text" placeholder="Ваш имя"/>
+                                            <input class="input" type="text" name="name" placeholder="Ваше имя"/>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="grid-column two">
                                     <div class="grid-column-cell">
-                                        <div class="range-slider">
-                                            <div class="name">Sed ut perspiciatis, unde omnis iste natus</div>
-                                            <div class="value">50</div>
-                                            <input class="slider" type="range" min="1" max="100" value="50" id="myRange"/>
-                                        </div>
+                                        <label class="range-slider">
+                                            <span class="name">Sed ut perspiciatis, unde omnis iste natus</span>
+                                            <span class="value">50</span>
+                                            <input class="slider" name="range" type="range" min="1" max="100" value="50" id="myRange"/>
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="grid-column">
@@ -239,6 +240,7 @@
         </div>
     </div>
     <script src="dist/bundle.js"></script>
+    <script src="js/simplebar.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
