@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/simplebar.css">
     <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="dist/perfect-scrollbar.css">
     <title>TEST</title>
 </head>
 <body>
@@ -129,18 +129,6 @@
                                 <div class="grid-column">
                                     <div class="grid-column-cell">
                                         <div class="form-field primary select">
-                                            <select name="select">
-                                                <option class="select-item">Sed ut perspiciatis</option>
-                                                <option class="select-item">Nemo enim ipsam</option>
-                                                <option class="select-item">Et harum quidem</option>
-                                                <option class="select-item">Temporibus autem</option>
-                                                <option class="select-item">Itaque earum rerum</option>
-                                                <option class="select-item">Sed ut perspiciatis</option>
-                                                <option class="select-item">Nemo enim ipsam</option>
-                                                <option class="select-item">Et harum quidem</option>
-                                                <option class="select-item">Temporibus autem</option>
-                                                <option class="select-item">Itaque earum rerum</option>
-                                            </select>
                                             <div class="select-header">
                                                 <div class="select-current" name="select">Выберите тип системы</div>
                                                 <div class="select-icon">
@@ -148,7 +136,7 @@
                                                     <img class="icon black" src="svg/ico-select-arrow-black.svg"/>
                                                 </div>
                                             </div>
-                                            <div class="select-body">
+                                            <div class="select-body" data-simplebar>
                                                 <div class="select-item">Sed ut perspiciatis</div>
                                                 <div class="select-item">Nemo enim ipsam</div>
                                                 <div class="select-item">Et harum quidem</div>
@@ -173,7 +161,7 @@
                                 <div class="grid-column">
                                     <div class="grid-column-cell">
                                         <label class="form-field primary">
-                                            <input class="input" type="text" name="name" placeholder="Ваш имя"/>
+                                            <input class="input" type="text" name="name" placeholder="Ваше имя"/>
                                         </label>
                                     </div>
                                 </div>
@@ -251,7 +239,7 @@
             </div>
         </div>
     </div>
-    <script src="dist/perfect-scrollbar.css"></script>
+    <script src="js/simplebar.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
