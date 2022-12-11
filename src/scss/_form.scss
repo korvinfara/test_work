@@ -13,6 +13,7 @@
   }
   .range-slider {
     position: relative;
+    display: block;
     @include text-18;
     height: 48px;
     color: $white;
@@ -65,6 +66,9 @@
     &.select {
       position: relative;
       z-index: 20;
+      select {
+        display: none;
+      }
       .select-header {
         padding-right: 35px;
         position: relative;
@@ -91,7 +95,7 @@
         }
       }
       .select-body {
-        scrollbar-color: #6969dd #e0e0e0;
+        scrollbar-color: #3E9CDC #3D4050;
         scrollbar-width: thin;
         background: rgba(39,39,51,.9);
         border: 1px solid transparent;
@@ -238,14 +242,35 @@
 
 
 .block-form .form-field.select .select-body::-webkit-scrollbar { width: 7px; height: 0;}
-//.block-form .form-field.select .select-body::-webkit-scrollbar-button { background-color: #666; }
 .block-form .form-field.select .select-body::-webkit-scrollbar-track { background-color: #3D4050;}
 .block-form .form-field.select .select-body::-webkit-scrollbar-track-piece { background-color: rgba(61,64,80,.85)}
 .block-form .form-field.select .select-body::-webkit-scrollbar-thumb { height: 53px; background-color: #3E9CDC; border-radius: 3px;}
-//.block-form .form-field.select .select-body::-webkit-scrollbar-corner { background-color: #999;}
-//.block-form .form-field.select .select-body::-webkit-resizer { background-color: #666;}
 
+.block-form .form-field.select .select-body {
+  @-moz-document url-prefix(http://),url-prefix(https://) {
+    scrollbar {
+      -moz-appearance: none !important;
+      background: rgb(0,255,0) !important;
+    }
+    thumb,scrollbarbutton {
+      -moz-appearance: none !important;
+      background-color: rgb(0,0,255) !important;
+    }
 
+    thumb:hover,scrollbarbutton:hover {
+      -moz-appearance: none !important;
+      background-color: rgb(255,0,0) !important;
+    }
+
+    scrollbarbutton {
+      display: none !important;
+    }
+
+    scrollbar[orient="vertical"] {
+      min-width: 15px !important;
+    }
+  }
+}
 
 .block-form .range-slider .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
