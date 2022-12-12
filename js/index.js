@@ -1,4 +1,4 @@
-const mobileMenuButton = document.querySelector(".button.mobile");
+const mobileMenuButton = document.querySelector(".button__mobile");
 const wrap = document.querySelector(".wrap");
 
 mobileMenuButton.onclick = function(){
