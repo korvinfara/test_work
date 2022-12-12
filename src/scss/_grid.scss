@@ -2,27 +2,27 @@
   justify-content: normal;
   margin-bottom: 25px;
   margin-left: -30px;
-  .grid-column {
+  .column {
     margin-bottom: 30px;
     height: 100%;
     float: left;
-    .grid-column-cell {
+    .cell {
       margin-left: 30px;
       height: 100%;
     }
   }
-  &.flex {
+  &.grid__flex {
     align-items: stretch;
     flex-wrap: wrap;
     display: flex;
   }
-  &.two {
-    .grid-column {
+  &.grid__two {
+    .column {
       width: 50%;
     }
   }
-  &.three {
-    .grid-column {
+  &.grid__three {
+    .column {
       width: 33.3333%;
       &.two {
         width: 66.6666%;
@@ -31,18 +31,18 @@
   }
   @media screen and (max-width: 820px) {
     margin-left: -20px;
-    .grid-column {
-      .grid-column-cell {
+    .column {
+      .column-cell {
         margin-left: 20px;
       }
     }
-    &.two {
-      .grid-column {
+    &.grid__two {
+      .column {
         width: 50%;
       }
     }
-    &.three {
-      .grid-column {
+    &.grid__three {
+      .column {
         width: 100%;
         &.two {
           width: 100%;

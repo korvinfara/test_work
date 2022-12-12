@@ -2,8 +2,8 @@ const mobileMenuButton = document.querySelector(".button.mobile");
 const wrap = document.querySelector(".wrap");
 
 mobileMenuButton.onclick = function(){
-    mobileMenuButton.classList.toggle("checked");
-    wrap.classList.toggle("checked");
+    mobileMenuButton.classList.toggle("button__active");
+    wrap.classList.toggle("wrap__overflow");
     return null;
 };
 
@@ -26,7 +26,7 @@ let select = function () {
 
     function selectChoose() {
         let text = this.innerText,
-            select = this.closest('.select'),
+            select = this.closest('.field__select'),
             currentText = select.querySelector('.select-current');
         currentText.innerText = text;
         select.classList.remove('is-active');

@@ -5,31 +5,14 @@
 	width: 100%;
 	left: 0;
 	top: 0;
-	.header-center {
-		justify-content: space-between;
-		position: relative;
-		align-items: center;
-		max-width: 1232px;
-		padding: 0 30px;
-		margin: 0 auto;
-		display: flex;
-		height: 100px;
-	}
-	.header-logo {
-		.logo-link {
+	.center {
+		&.header__center {
+			justify-content: space-between;
+			position: relative;
 			align-items: center;
+			padding: 0 30px;
 			display: flex;
-		}
-		.logo-text {
-			text-transform: uppercase;
-			@include Raleway-Bold;
-			white-space: nowrap;
-			font-weight: 800;
-			line-height: 1;
-			font-size: 0;
-			span {
-				font-size: 28px;
-			}
+			height: 100px;
 		}
 	}
 	.buttons {
@@ -38,19 +21,18 @@
 		z-index: 2;
 	}
 	@media screen and (max-width: 1024px) {
-		.header-center {
-			height: 65px;
-		}
-		.header-logo {
-			.logo-text {
-				font-size: 25px;
+		.center {
+			&.header__center {
+				height: 65px;
 			}
 		}
 	}
 	@media screen and (max-width: 640px) {
-		.header-center {
-			padding: 0 6vw;
-			height: 13vw;
+		.center {
+			&.header__center {
+				padding: 0 6vw;
+				height: 13vw;
+			}
 		}
 		.header-logo {
 			.logo-text {

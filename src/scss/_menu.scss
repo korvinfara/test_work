@@ -1,94 +1,91 @@
-.header {
-	.header-menu {
-		align-items: center;
+.menu {
+	align-items: center;
+	position: relative;
+	display: flex;
+	height: 100%;
+	.item {
 		position: relative;
-		display: flex;
 		height: 100%;
-		.menu-item {
-			position: relative;
-			height: 100%;
-			&:after {
-				transition: all 250ms;
-				background: $blue;
-				position: absolute;
-				height: 3px;
-				content: '';
-				left: 50%;
-				bottom: 0;
-				width: 0;
-			}
-			.item-link {
-				text-transform: uppercase;
-				@include Lato-Regular;
-				transition: all 250ms;
-				align-items: center;
-				font-weight: 500;
-				font-size: 13px;
-				padding: 0 30px;
-				color: $white;
-				display: flex;
-				height: 100%;
-			}
-			&.checked, &:hover{
-				.item-link {
-					color: $blue;
-				}
-				&:after {
-					width: 100%;
-					left: 0;
-				}
-			}
-		}
-		@media screen and (max-width: 1300px) {
-			.menu-item {
-				.item-link {
-					padding: 0 15px;
-				}
-			}
-		}
-		@media screen and (max-width: 1024px) {
-			background: rgba(16,16,29,.9);
+		&:after {
 			transition: all 250ms;
+			background: $blue;
 			position: absolute;
-			padding: 30px 40px;
-			display: block;
-			right: -100vw;
-			height: auto;
-			top: 65px;
-			.menu-item {
-				@include primary-animation;
-				animation-delay: 400ms;
-				line-height: 40px;
-				height: 40px;
-				opacity: 0;
-				.item-link {
-					justify-content: center;
-					padding: 0;
-				}
-				&:after {
-					display: none;
-				}
+			height: 3px;
+			content: '';
+			left: 50%;
+			bottom: 0;
+			width: 0;
+		}
+		.link {
+			text-transform: uppercase;
+			@include Lato-Regular;
+			transition: all 250ms;
+			align-items: center;
+			font-weight: 500;
+			font-size: 13px;
+			padding: 0 30px;
+			color: $white;
+			display: flex;
+			height: 100%;
+		}
+		&.item__checked, &:hover{
+			.link {
+				color: $blue;
+			}
+			&:after {
+				width: 100%;
+				left: 0;
 			}
 		}
-		@media screen and (max-width: 640px) {
-			height: calc(100vh - 13vw);
-			flex-direction: column;
-			display: flex;
-			padding: 10vw;
-			top: -150vh;
-			width: 100%;
-			right: 0;
-			.menu-item {
-				line-height: 12vw;
-				height: 12vw;
-				.item-link {
-					font-size: 5vw;
-				}
+	}
+	@media screen and (max-width: 1300px) {
+		.item {
+			.link {
+				padding: 0 15px;
+			}
+		}
+	}
+	@media screen and (max-width: 1024px) {
+		background: rgba(16,16,29,.9);
+		transition: all 250ms;
+		position: absolute;
+		padding: 30px 40px;
+		display: block;
+		right: -100vw;
+		height: auto;
+		top: 65px;
+		.item {
+			@include primary-animation;
+			animation-delay: 400ms;
+			line-height: 40px;
+			height: 40px;
+			opacity: 0;
+			.link {
+				justify-content: center;
+				padding: 0;
+			}
+			&:after {
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		height: calc(100vh - 13vw);
+		flex-direction: column;
+		display: flex;
+		padding: 10vw;
+		top: -150vh;
+		width: 100%;
+		right: 0;
+		.item {
+			line-height: 12vw;
+			height: 12vw;
+			.link {
+				font-size: 5vw;
 			}
 		}
 	}
 }
-
 .button {
 	&.mobile {
 		position: absolute;
@@ -115,7 +112,7 @@
 				bottom: 0;
 			}
 		}
-		&.checked {
+		&.button__active {
 			.line {
 				&:first-child {
 					transform: rotate(45deg);
@@ -133,10 +130,10 @@
 					left: -1px;
 				}
 			}
-			& ~ .header-menu {
+			& ~ .menu {
 				right: 0;
-				.menu-item {
-					animation-name: mobile-menu-fade;
+				.item {
+					animation-name: mobile-fade;
 					animation-delay: 300ms;
 					opacity: 1;
 				}
@@ -163,7 +160,7 @@
 					bottom: 0;
 				}
 			}
-			&.checked {
+			&.button__active {
 				.line {
 					&:first-child {
 						width: 130%;
@@ -176,11 +173,11 @@
 						bottom: 43%;
 					}
 				}
-				& ~ .header-menu {
-					animation-name: mobile-menu-move;
+				& ~ .menu {
+					animation-name: mobile-move;
 					top: 13vw;
-					.menu-item {
-						animation-name: mobile-menu-fade;
+					.item {
+						animation-name: mobile-fade;
 						animation-delay: 300ms;
 						opacity: 1;
 					}
@@ -190,7 +187,7 @@
 	}
 }
 
-@keyframes mobile-menu-fade {
+@keyframes mobile-fade {
 	0% {
 		opacity: 0;
 	}
@@ -198,7 +195,7 @@
 		opacity: 1;
 	}
 }
-@keyframes mobile-menu-move {
+@keyframes mobile-move {
 	0% {
 		top: -150vh;
 		opacity: 0;

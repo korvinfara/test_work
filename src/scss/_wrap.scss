@@ -6,7 +6,7 @@
     overflow-y: scroll;
   }
   @media screen and (max-width: 640px) {
-    &.checked {
+    &.wrap__overflow {
       overflow: hidden;
       height: 100vh;
     }

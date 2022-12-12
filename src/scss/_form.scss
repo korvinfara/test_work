@@ -43,8 +43,8 @@
       left: 0;
     }
   }
-  .form-field {
-    &.primary {
+  .field {
+    &.field__primary {
       background: rgba(255, 255, 255, 0.85);
       transition: all 350ms;
       border-radius: 3px;
@@ -63,7 +63,7 @@
         width: 100%;
       }
     }
-    &.select {
+    &.field__select {
       position: relative;
       z-index: 20;
       select {
@@ -164,10 +164,10 @@
 
     }
   }
-  .form-buttons {
+  .buttons {
     text-align: center;
     .button {
-      &.large {
+      &.button__large {
         width: calc(33% - 20px);
       }
     }
@@ -178,21 +178,21 @@
     width: 640px;
     .grid {
       margin-bottom: 0;
-      .grid-column {
+      .column {
         &:last-child {
           text-align: center;
         }
       }
       .button {
-        &.large {
+        &.button__large {
           width: 50%;
         }
       }
     }
-    .form-buttons {
+    .buttons {
       text-align: center;
       .button {
-        &.large {
+        &.button__large {
           width: 50%;
         }
       }
@@ -201,15 +201,15 @@
   @media screen and (max-width: 640px) {
     .grid {
       .button {
-        &.large {
+        &.button__large {
           width: 60vw;
         }
       }
     }
-    .form-buttons {
+    .buttons {
       text-align: center;
       .button {
-        &.large {
+        &.button__large {
           width: 60vw;
         }
       }
@@ -217,15 +217,15 @@
     .range-slider {
       height: 10vw;
     }
-    .form-field {
-      &.primary {
+    .field {
+      &.field__primary {
         height: 10vw;
         .input, .select-header {
           line-height: 10vw;
           padding: 0 3vw;
         }
       }
-      &.select {
+      &.field__select {
         .select-header {
           padding-right: 6vw;
           .select-icon {
@@ -248,44 +248,11 @@
             height: 30vh;
           }
         }
-
-
       }
     }
   }
 }
 
-
-//.block-form .form-field.select .select-body::-webkit-scrollbar { width: 7px; height: 0;}
-//.block-form .form-field.select .select-body::-webkit-scrollbar-track { background-color: #3D4050;}
-//.block-form .form-field.select .select-body::-webkit-scrollbar-track-piece { background-color: rgba(61,64,80,.85)}
-//.block-form .form-field.select .select-body::-webkit-scrollbar-thumb { height: 53px; background-color: #3E9CDC; border-radius: 3px;}
-//
-//.block-form .form-field.select .select-body {
-//  @-moz-document url-prefix(http://),url-prefix(https://) {
-//    scrollbar {
-//      -moz-appearance: none !important;
-//      background: rgb(0,255,0) !important;
-//    }
-//    thumb,scrollbarbutton {
-//      -moz-appearance: none !important;
-//      background-color: rgb(0,0,255) !important;
-//    }
-//
-//    thumb:hover,scrollbarbutton:hover {
-//      -moz-appearance: none !important;
-//      background-color: rgb(255,0,0) !important;
-//    }
-//
-//    scrollbarbutton {
-//      display: none !important;
-//    }
-//
-//    scrollbar[orient="vertical"] {
-//      min-width: 15px !important;
-//    }
-//  }
-//}
 
 .block-form .range-slider .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -307,9 +274,4 @@
   height: 23px;
   width: 23px;
 }
-.block-form .range-slider .slider {
 
-}
-.block-form .range-slider .slider {
-
-}
